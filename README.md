@@ -1,0 +1,1 @@
+A Sample project to test remote development feature of IntelliJ IDEA on Docker + WSL2 environment
