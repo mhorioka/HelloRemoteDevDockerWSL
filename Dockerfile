@@ -5,7 +5,11 @@ ARG GROUPNAME=intellij
 ARG UID=1000
 ARG GID=1000
 ARG PROJDIR=project
-ARG IDEURL=https://download.jetbrains.com/idea/ideaIU-2021.3.2.tar.gz
+#ARG IDEURL=https://download.jetbrains.com/idea/ideaIU-2021.3.2.tar.gz
+ARG IDEURL=https://download.jetbrains.com/idea/ideaIU-221.4501.155.tar.gz
+#ARG PROJURL=https://github.com/spring-projects/spring-petclinic
+ARG PROJURL=https://github.com/mhorioka/HelloSpringBootRemoteDev
+
 
 #Create non-root user
 RUN groupadd -g $GID $GROUPNAME && \
@@ -14,7 +18,7 @@ USER $USERNAME
 WORKDIR /home/$USERNAME
 
 #Clone project code and build (to cache dependencies,etc)
-RUN git clone https://github.com/spring-projects/spring-petclinic $PROJDIR
+RUN git clone $PROJURL $PROJDIR
 RUN cd $PROJDIR && ./mvnw -ntp package
 
 #Download & Install IntelliJ IDEA
