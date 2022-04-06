@@ -6,7 +6,7 @@ ARG UID=1000
 ARG GID=1000
 ARG PROJDIR=project
 #ARG IDEURL=https://download.jetbrains.com/idea/ideaIU-2021.3.2.tar.gz
-ARG IDEURL=https://download.jetbrains.com/idea/ideaIU-221.4994.44.tar.gz
+ARG IDEURL=https://download.jetbrains.com/idea/ideaIU-221.5080.93.tar.gz
 ARG PROJURL=https://github.com/spring-projects/spring-petclinic
 #ARG PROJURL=https://github.com/mhorioka/HelloSpringBootRemoteDev
 
